@@ -13,7 +13,7 @@ def check_location(location, lat, long):
     0 for false
     """
     api_url = 'https://maps.googleapis.com/maps/api/geocode/json'
-    api_params = {'address': location, 'key': 'AIzaSyCLZe90V23mCwzRnw_1tyiV8R5UKnv0yDY'}
+    api_params = {'address': location, 'key': '[API_KEY]}
     json_data = requests.get(url=api_url, params=api_params)
     new_data = json_data.json()
     bounds = new_data['results'][0]['geometry']['bounds']
